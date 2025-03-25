@@ -1,5 +1,5 @@
 <?php
-$TOKEN = getenv("7722832724:AAELQEo3298Ym1-aQ71GMSxUMsP9ZwxFKCU"); // ใช้ GitHub Secrets
+$TOKEN = getenv("TELEGRAM_BOT_TOKEN"); // ใช้ GitHub Secrets
 $API_URL = "https://api.telegram.org/bot$TOKEN/";
 
 $content = file_get_contents("php://input");

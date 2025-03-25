@@ -1,0 +1,22 @@
+name: Run Telegram Bot
+
+on:
+  schedule:
+    - cron: "*/1 * * * *" # รันทุก 5 นาที
+  workflow_dispatch: # สามารถกดรันเองได้ด้วย
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+
+      - name: Run Telegram Bot
+        run: php webhook.php

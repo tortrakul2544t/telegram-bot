@@ -7,7 +7,7 @@ $update = json_decode($content, true);
 if (isset($update["message"])) {
     $message = $update["message"];
     $chat_id = $message["chat"]["id"];
-    $token = "TELEGRAM_BOT_TOKEN"; // ใส่ Token ตรงนี้
+    $token = "7765519272:AAF5zxUVZVkbxzr3AUZ0QLAXdA4nZzcZJ6s"; // ใส่ Token ตรงนี้
 
     // ถ้าผู้ใช้ส่งคำสั่ง /start
     if (isset($message["text"]) && $message["text"] === "/start") {
